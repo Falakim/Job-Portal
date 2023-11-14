@@ -1,0 +1,13 @@
+CREATE TABLE `wantjob` (
+  `idPersonal_Info` int NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `category` varchar(45) DEFAULT NULL,
+  `qualification` varchar(45) DEFAULT NULL,
+  `gender` varchar(45) DEFAULT NULL,
+  `age` varchar(45) DEFAULT NULL,
+  `reference` varchar(45) DEFAULT NULL,
+  `resume` mediumblob,
+  PRIMARY KEY (`idPersonal_Info`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

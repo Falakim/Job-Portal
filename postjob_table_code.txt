@@ -1,0 +1,10 @@
+CREATE TABLE `postjob` (
+  `idpostjob` int NOT NULL AUTO_INCREMENT,
+  `company_name` varchar(45) NOT NULL,
+  `location` varchar(45) NOT NULL,
+  `experience` varchar(45) NOT NULL,
+  `skill` varchar(45) NOT NULL,
+  `salary` int NOT NULL,
+  `job_description` varchar(45) NOT NULL,
+  PRIMARY KEY (`idpostjob`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

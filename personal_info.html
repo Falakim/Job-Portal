@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Get Wings- job seeker</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+   
+</head>
+<style>
+    /* ====================================== */
+    /*CUSTOM FONT*/
+    /* ====================================== */
+    
+    @font-face {
+        font-family: "projectfont";
+        src: url("font/Poppins.ttf");
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: projectfont;
+    }
+    /* Custom Font*/
+    /* ======================================
+    */
+    /* HEADER*/
+    /* ====================================== */
+    
+    header {
+        background-color: #304661;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 5px 0;
+        width: 100%;
+        height: auto;
+    }
+    /* ====================================== */
+    /* NAV-BAR / /* ======================================
+    */
+    
+    .user-detail {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 10px auto;
+        padding: 0;
+        font-size: 12px;
+        text-align: center;
+        color: #232F3E;
+    }
+    
+    .user-detail h2 {
+        color: #1177d1;
+    }
+    
+    .main {
+        width: 100%;
+        background-color: #232F3E;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .menu-bar {
+        width: 10%;
+        box-sizing: border-box;
+        margin: 15px auto;
+        padding: 0;
+        text-align: center;
+    }
+    /* ====================================== */
+    /* NAV / /* ====================================== */
+    
+    nav {
+        background-color: #232F3E;
+        width: 100%;
+        display: none;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        height: 0 auto;
+    }
+    
+    nav ul {
+        display: block;
+    }
+    
+    nav ul li {
+        list-style: none;
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        margin-left: 40px;
+        padding: 0 10px;
+    }
+    
+    nav ul li ul {
+        display: none;
+    }
+    
+    nav ul li ul li {
+        margin-left: 30px;
+        background-color: #232F3E
+    }
+    
+    nav ul li a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 5px 8px;
+        border-radius: 5px;
+    }
+    
+    nav ul li a:hover {
+        display: inline-block;
+        background-color: #1177d1;
+        color: #fff;
+        transition: 0.5s;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 5px 8px;
+        border-radius: 5px;
+    }
+    /* ====================================== */
+    /* FORM */
+    /* ====================================== */
+    
+    .form-login {
+        width: 100%;
+    }
+    
+    .my-form {
+        font-size: 12px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0;
+        width: 80%;
+        background-color: #EFFAFD;
+        box-shadow: 0 0 8px #888888;
+    }
+    
+    .my-form div {
+        box-sizing: border-box;
+        margin: 20px auto;
+        padding: 0 10px;
+        width: 80%;
+    }
+    
+    .image {
+        text-align: center;
+    }
+    
+    .my-form div img {
+        width: 70px;
+        height: 45px;
+        background-size: cover;
+    }
+    
+    .my-form div h2 {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-weight: lighter;
+    }
+    
+    .my-form div p {
+        text-align: center;
+    }
+    
+    .my-form div p button {
+        background: none;
+        border: none;
+        color: #1177d1;
+        ;
+        font-size: 16px;
+    }
+    
+    .my-form div p button:hover {
+        text-decoration: underline;
+        text-decoration-color: black;
+    }
+    
+    .my-form div label {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .my-form div input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    option,
+    [type="file"] {
+        display: inline-block;
+        color: #000;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    
+    .my-form div input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="password"]:hover,
+    input[type="number"]:hover {
+        display: inline-block;
+        border: 1px solid #1177d1;
+        box-sizing: border-box;
+        padding: 11px;
+        box-shadow: 0 0 8px#1177d1;
+    }
+    
+    .my-form div input[type="submit"] {
+        display: inline-block;
+        background: #232F3E;
+        color: #fff;
+        width: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        border: 0;
+        padding: 12px 35px;
+        margin: 20px auto;
+        border-radius: 5px;
+    }
+    
+    .my-form div input[type="submit"]:hover {
+        box-shadow: 0 0 8px #888888;
+        background: #1177d1;
+        border-radius: 5px;
+    }
+    
+    .textarea {
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 11px;
+    }
+    
+    .textarea:hover,
+    input[type="text"]:hover {
+        display: inline-block;
+        border: 1px solid #1177d1;
+        box-sizing: border-box;
+        padding: 11px;
+        box-shadow: 0 0 8px#1177d1;
+    }
+    /* .form-signup{display: none;} */
+    /* ======================================
+    */
+    /* FOOTER */
+    /* ====================================== */
+    
+    footer {
+        background: #232F3E;
+        width: 100%;
+        height: 50px;
+        color: #fff;
+        clear: both;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 15px;
+        text-align: center;
+        word-spacing: 3px;
+    }
+    
+    @media(min-width:768px) {
+        .main {
+            height: 100px;
+        }
+        .my-form {
+            width: 60%;
+            font-size: 15px
+        }
+        .my-form div {
+            width: 70%;
+        }
+        .my-form div img {
+            width: 100px;
+            height: 70px;
+            background-size: cover;
+        }
+        .menu-bar {
+            display: none;
+        }
+        nav {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        nav ul {
+            display: flex;
+            z-index: 99999;
+        }
+        nav ul li {
+            margin: 0px;
+        }
+        .active {
+            margin: 0 70px 0 75px;
+        }
+    }
+    
+    @media(min-width:1024px) {
+        section {
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .usection {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 50%;
+            float: left;
+            height: 450px;
+        }
+        .usection img {
+            background-size: cover;
+            width: 85%;
+            margin: 20px 0 0 50px;
+        }
+        .usection div {
+            width: 70%;
+            margin: 100px auto;
+            padding: 20px;
+        }
+        .usection p {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 10px 25px 10px 0;
+        }
+        .usection a {
+            text-decoration: none;
+            color: #fff;
+            background: #232F3E;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 5px 10px;
+        }
+        .usection a:hover {
+            background-color: #1177d1;
+        }
+        .my-form {
+            width: 40%;
+        }
+        .user-detail {
+            font-size: 16px;
+        }
+        .my-form div {
+            width: 60%;
+        }
+        #container-3 {
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 5px 20px;
+            color: #808080;
+        }
+        #container-3 .item-1 {
+            border-bottom: 5px solid #0B6C97;
+        }
+        .underhighlight {
+            text-align: center;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+            margin: 10px;
+            padding: 10px;
+        }
+        .underhighlight:hover {
+            box-shadow: 0 0 2px 2px #0B6C97;
+            border-radius: 10px;
+        }
+        .underhighlight p2 {
+            font-style: italic;
+        }
+        .underhighlight {
+            text-align: center;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            width: 30%;
+            box-sizing: border-box;
+            margin: 10px;
+            padding: 10px;
+            float: left;
+        }
+        .underhighlight:hover {
+            box-shadow: 0 0 2px 2px #0B6C97;
+            border-radius: 10px;
+        }
+        .underhighlight p2 {
+            font-style: italic;
+        }
+        .undersection {
+            width: 90%;
+            padding: 10px 30px;
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li class="active"><img src="logo1.jpeg" width="75px" height="75px"><i style="color: #EFFAFD;"> Get Wings</i> </li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="wantjob.html">Want Jobs</a></li>
+            <li><a href="postjob.html">Post Jobs</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="form-signup">
+            <form class="my-form"  action= "datatransfer.jsp" method="post">
+                <div>
+                    <h2>Job Registration</h2>
+                </div>
+                <div>
+                    <label for="lbid1">First Name</label>
+                    <input type="text" id="labid1" name="firstname" placeholder="abc" required />
+                </div>
+				<div>
+                    <label for="lbid1">Last Name</label>
+                    <input type="text" id="labid1" name="lastname" placeholder="xyz" required />
+                </div>
+                <div>
+                    <label for="lbid2">Email</label>
+                    <input type="email" id="labid2" name="email" placeholder="abc@gmail.com" required />
+                </div>
+                <div>
+                    <label for="lbid3">Job Category</label>
+                    <input type="text" list="browsers" name="category" placeholder="select Job Category" />
+                    <datalist id="browsers">
+                        <option value="Web development">
+                        <option value="Graphic Designer">
+                        <option value="Advirtisement">
+                        <option value="Software Developer">
+                        <option value="Andriod Developer">
+                        <option value="Writer"></option>
+                        <option value="Management"></option>
+                    </datalist>
+                </div>
+                <div>
+                    <label for="lbid4">Qualification</label>
+                    <input type="text" list="aa" name="qualification" placeholder="Qualification" />
+                    <datalist id="aa">
+                        <option value="Matric">
+                        <option value="Inter">
+                        <option value="Bachelor">
+                        <option value="Master">
+                    </datalist>
+
+                </div>
+                <div>
+                    <label for="lbid5">Gender</label>
+                    <input type="radio" id="male" name="gender" value="male"> &nbsp;Male
+                    <input type="radio" id="female" name="gender" value="female" >&nbsp; Female
+					<input type="radio" id="others" name="gender" value="others" >&nbsp; Female
+                </div>
+                <div>
+                    <label for="lbid1">Age Limit (18-35)</label>
+                    <input type="number" id="age" name="age" min="18" max="35" required>
+                </div>
+
+                <div>
+                    <label>Any Reference </label>
+                    <textarea class="textarea" name="reference" placeholder="Reference" required></textarea>
+                </div>
+                <div>
+                    <label for="lbid1">Other Information (CV) </label>
+                    <input type="file" id="resume"  name="resume" required />
+                </div>
+                <div class="submit">
+                    <input type="submit" name="submit" value="Apply" />
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="clearfix">
+        CopyRight &copy; All Right Reserved. &nbsp; Job's Portal
+    </footer>
+</body>
+
+</html>
